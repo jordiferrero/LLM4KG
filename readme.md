@@ -1,3 +1,4 @@
+# LLM for Knowledge Graph creation from unstructured text data
 
 ## Install and launch neo4j
 
@@ -22,7 +23,7 @@ Once you login for the first time, you will be asked to change the password. I c
 After this, you are ready to create your first property graph!
 
 
-# Install an env to run langchain
+## Install an env to run langchain
 
 Install dependencies
 ```bash
@@ -31,7 +32,7 @@ pip install --upgrade  -r requirements.txt
 
 Then run `main.py`.
 
-# References
+## References
 
 Project adapted from https://python.langchain.com/v0.1/docs/use_cases/graph/constructing/
 Also inspired by https://colab.research.google.com/github/run-llama/llama_index/blob/main/docs/docs/examples/property_graph/property_graph_advanced.ipynb#scrollTo=EL6tYUI14S3D
