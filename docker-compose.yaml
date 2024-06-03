@@ -1,0 +1,28 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j-apoc
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./data:/data
+      - ./plugins:/plugins
+    environment:
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_apoc_import_file_use__neo4j__config: "true"
+      NEO4JLABS_PLUGINS: '["apoc"]'
+  web:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    command: >
+      sh -c "
+      pip install --no-cache-dir -r requirements.txt &&
+      flask --app ./src/hello --debug run --host=0.0.0.0 --port=8080
+      "
+
