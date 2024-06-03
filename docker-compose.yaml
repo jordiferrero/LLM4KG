@@ -1,5 +1,5 @@
 services:
-  neo4j:
+  neo-db:
     image: neo4j:latest
     container_name: neo4j-apoc
     ports:
@@ -25,4 +25,8 @@ services:
       pip install --no-cache-dir -r requirements.txt &&
       flask --app ./src/hello --debug run --host=0.0.0.0 --port=8080
       "
+    environment:
+    - NEO4J_URI=neo4j://neo-db:7687
+    depends_on:
+    - neo-db
 

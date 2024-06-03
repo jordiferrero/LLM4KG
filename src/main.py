@@ -7,7 +7,6 @@ from langchain_openai import ChatOpenAI
 
 load_dotenv(".env")
 
-os.environ["NEO4J_URI"] = os.environ.get("NEO4J_URI")
 os.environ["NEO4J_USERNAME"] = os.environ.get("NEO4J_USERNAME")
 os.environ["NEO4J_PASSWORD"] = os.environ.get("NEO4J_PASSWORD")
 

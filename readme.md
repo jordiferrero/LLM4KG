@@ -35,4 +35,7 @@ Then run `main.py`.
 ## References
 
 Project adapted from https://python.langchain.com/v0.1/docs/use_cases/graph/constructing/
+
 Also inspired by https://colab.research.google.com/github/run-llama/llama_index/blob/main/docs/docs/examples/property_graph/property_graph_advanced.ipynb#scrollTo=EL6tYUI14S3D
+
+For the docker-compose setup see https://medium.com/@bhunia.payel0301/containerize-fastapi-application-with-neo4j-using-docker-compose-file-969bb728d28b
